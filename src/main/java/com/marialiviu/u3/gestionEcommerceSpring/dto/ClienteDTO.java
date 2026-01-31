@@ -19,14 +19,18 @@ import java.time.LocalDateTime;
 public class ClienteDTO {
     /** Identificador fiscal único (NIF o CIF). */
     private String nifCif;
-    /** Nombre y apellidos o razón social del cliente. */
+    
+    /** Nombre y apellidos. */
     private String nombreCompleto;
-    /** Dirección de correo electrónico de contacto. */
+    
+    /** Email de contacto. */
     private String email;
-    /** Número de teléfono recuperado de la información fiscal. */
-    private String telefono;
-    /** Dirección postal recuperada de la información fiscal. */
-    private String direccion;
-    /** Fecha y hora en la que se registró el cliente en el sistema. */
+    
+    /** * IMPORTANTE: Aquí metemos el objeto completo.
+     * Esto arreglará el error del Backend y te permitirá usar setInformacionFiscal.
+     */
+    private InformacionFiscalDTO informacionFiscal;
+    
+    /** Fecha de creación. */
     private LocalDateTime fechaCreacion;
 }
