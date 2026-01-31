@@ -1,0 +1,11 @@
+Ejecutar desde la terminal de docker:
+
+docker exec -it ecommerce_oracle_db sqlplus / as sysdba//localhost/ECCOMMERCEPDB1
+
+¿Qué hace cada cosa?
+docker exec: Ejecuta un comando en un contenedor en funcionamiento.
+    -it: Modo interactivo.
+	usuarios_oracle: El nombre de tu contenedor.
+    sqlplus: El cliente de línea de comandos de Oracle (equivalente a 'mariadb' o 'mysql').
+    / as sysdba: Para entrar como SUPER ADMINISTRADOR root (SYS). 
+    @//localhost/ECCOMMERCEPDB1: La cadena de conexión interna. Le dice que conecte a la PDB 'ECCOMMERCEPDB1' y no a la base raíz (CDB).
